@@ -994,7 +994,7 @@ class StepPatch(PathPatch):
 
     @docstring.dedent_interpd
     def __init__(self, vals, edges, *,
-                 orientation='horizontal', baseline=0, **kwargs):
+                 orientation='vertical', baseline=0, **kwargs):
         """
         Parameters
         ----------
