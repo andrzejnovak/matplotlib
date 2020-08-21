@@ -1797,7 +1797,8 @@ def test_histline_fill(fig_test, fig_ref):
     test_axes[0].histline(h, bins, fill=True)
     test_axes[1].histline(h, bins, orientation='horizontal', fill=True)
     test_axes[2].histline(h, bins, baseline=bs, fill=True)
-    test_axes[3].histline(h, bins, baseline=bs, orientation='horizontal', fill=True)
+    test_axes[3].histline(h, bins, baseline=bs, orientation='horizontal',
+                          fill=True)
 
     # # Ref
     fig_ref, ref_axes = plt.subplots(2, 2)

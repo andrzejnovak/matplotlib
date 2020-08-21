@@ -6883,7 +6883,8 @@ such objects
     @_preprocess_data()
     def histline(self, vals, bins=None, *,
                  orientation='vertical', baseline=0, fill=False, **kwargs):
-        """A histogram-like line or filled plot.
+        """
+        A histogram-like line or filled plot.
 
         Parameters
         ----------
@@ -6921,7 +6922,7 @@ such objects
             kwargs.setdefault('edgecolor', 'none')
             kwargs.setdefault('facecolor', _color)
         else:
-            kwargs.setdefault('edgecolor', _color)            
+            kwargs.setdefault('edgecolor', _color)
 
         if bins is None:
             bins = np.arange(len(vals) + 1)
