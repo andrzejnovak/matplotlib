@@ -6925,7 +6925,7 @@ such objects
             kwargs.setdefault('edgecolor', _color)
 
         if bins is None:
-            bins = np.arange(len(vals) + 1)
+            bins = np.arange(len(values) + 1)
 
         patch = mpatches.StepPatch(values,
                                    bins,
