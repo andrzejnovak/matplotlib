@@ -1024,8 +1024,13 @@ class StepPatch(PathPatch):
         super().__init__(path, **kwargs)
 
     def _update_data(self):
-        if self._edges.size - 1 != self._vals.size:
-            raise ValueError('Size mismatch between "values" and "edges"')
+        if self._edges.size - 1 != self._values.size:
+            raise ValueError('Size mismatch between "values" and "edges". '
+                             "Expected `len(values) + 1 == len(edges)`, but "
+                             "they are or lengths {} and {}".format(
+                                 self._edges.size, self._values.size
+                             )
+            )
         verts, codes = [], []
         for idx0, idx1 in cbook.contiguous_regions(~np.isnan(self._values)):
             x = np.vstack((self._edges[idx0:idx1+1],
@@ -1048,7 +1053,7 @@ class StepPatch(PathPatch):
         self._edges = np.asarray(edges)
         self._update_data()
 
-    def set_values(self, vals):
+    def set_values(self, values):
         self._values = np.asarray(values)
         self._update_data()
 
