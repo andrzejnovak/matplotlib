@@ -30,7 +30,7 @@ axs[1].histline(np.arange(1, 6, 1)*0.3, np.arange(2, 8, 1),
                 label='Hatched histogram\nw/ horizontal orientation')
 axs[1].set_title("Filled histogram")
 
-patch = StepPatch(vals=[1, 2, 3, 2, 1],
+patch = StepPatch(values=[1, 2, 3, 2, 1],
                   edges=range(1, 7),
                   label=('Patch derived underlying object\n'
                          'with default edge/facecolor behaviour'))
