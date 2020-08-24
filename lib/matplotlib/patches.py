@@ -1009,7 +1009,7 @@ class StepPatch(PathPatch):
 
         baseline : float or None, default: 0
             Determines starting value of the bounding edges or when
-            `fill=True`, position of lower edge.
+            ``fill=True``, position of lower edge.
 
         Other valid keyword arguments are:
 

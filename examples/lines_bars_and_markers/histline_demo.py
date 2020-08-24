@@ -3,10 +3,10 @@
 Histline Demo
 =============
 
-This example demonstrates the use of `.pyplot.histline` for histogram
-and histogram-like data visualization and an associated underlying
-`.patches.StepPatch` artist, which is a contrained version of `.PathPatch`
-specified by its bins and edges.
+This example demonstrates the use of `~matplotlib.pyplot.histline`
+for histogram and histogram-like data visualization and an associated
+underlying `.patches.StepPatch` artist, which is a contrained version
+of `.PathPatch` specified by its bins and edges.
 """
 
 import numpy as np

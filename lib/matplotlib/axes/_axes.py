@@ -6899,7 +6899,7 @@ such objects
 
         baseline : float or None, default: 0
             Determines starting value of the bounding edges or when
-            `fill=True`, position of lower edge.
+            ``fill=True``, position of lower edge.
 
         fill : bool, default: False
 
@@ -6910,7 +6910,7 @@ such objects
         Other Parameters
         ----------------
         **kwargs
-            `~matplotlib.patches.StepPatch` properties
+            `~.matplotlib.patches.StepPatch` properties
 
         """
 
