@@ -1,5 +1,5 @@
-New `.patches.StepPatch` artist and a `.pyplot.histline` method
-------------------------------------------------------------------------
+New `~.matplotlib.patches.StepPatch` artist and a `.pyplot.histline` method
+---------------------------------------------------------------------------
 These take inputs of asymmetric lengths with y-like values and 
 x-like edges, between which the values lie.
 
