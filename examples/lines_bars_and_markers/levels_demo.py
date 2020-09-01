@@ -5,7 +5,7 @@ Histline Demo
 
 This example demonstrates the use of `~.matplotlib.pyplot.levels`
 for histogram and histogram-like data visualization and an associated
-underlying `~.matplotlib.patches.LevelsPatch` artist, which is
+underlying `.LevelsPatch` artist, which is
 a contrained version of `.PathPatch` specified by its bins and edges.
 """
 
@@ -24,16 +24,16 @@ axs[0].levels(h, bins+10, baseline=None, label='--//-- w/ no edges')
 axs[0].set_title("Step Histograms")
 
 axs[1].levels(np.arange(1, 6, 1), fill=True,
-                label='Filled histogram\nw/ automatatic edges')
+              label='Filled histogram\nw/ automatatic edges')
 axs[1].levels(np.arange(1, 6, 1)*0.3, np.arange(2, 8, 1),
-                orientation='horizontal', hatch='//',
-                label='Hatched histogram\nw/ horizontal orientation')
+              orientation='horizontal', hatch='//',
+              label='Hatched histogram\nw/ horizontal orientation')
 axs[1].set_title("Filled histogram")
 
 patch = LevelsPatch(values=[1, 2, 3, 2, 1],
-                  edges=range(1, 7),
-                  label=('Patch derived underlying object\n'
-                         'with default edge/facecolor behaviour'))
+                    edges=range(1, 7),
+                    label=('Patch derived underlying object\n'
+                           'with default edge/facecolor behaviour'))
 axs[2].add_patch(patch)
 axs[2].set_xlim(0, 7)
 axs[2].set_ylim(-1, 5)

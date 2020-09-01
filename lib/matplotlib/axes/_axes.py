@@ -6905,12 +6905,12 @@ such objects
 
         Returns
         -------
-        LevelsPatch : `.patches.LevelsPatch`
+        LevelsPatch : `matplotlib.patches.LevelsPatch`
 
         Other Parameters
         ----------------
         **kwargs
-            `~.matplotlib.patches.LevelsPatch` properties
+            `~matplotlib.patches.LevelsPatch` properties
 
         """
 
