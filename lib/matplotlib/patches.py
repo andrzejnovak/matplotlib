@@ -1034,10 +1034,8 @@ class LevelsPatch(PathPatch):
                              )
         verts, codes = [], []
         for idx0, idx1 in cbook.contiguous_regions(~np.isnan(self._values)):
-            x = np.vstack((self._edges[idx0:idx1+1],
-                           self._edges[idx0:idx1+1])).T.flatten()
-            y = np.vstack((self._values[idx0:idx1],
-                           self._values[idx0:idx1])).T.flatten()
+            x = np.repeat(self._edges[idx0:idx1+1], 2)
+            y = np.repeat(self._values[idx0:idx1], 2)
             if self.baseline is not None:
                 y = np.hstack((self.baseline, y, self.baseline))
             else:
