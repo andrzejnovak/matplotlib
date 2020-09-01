@@ -1043,9 +1043,9 @@ class LevelsPatch(PathPatch):
             else:
                 y = np.hstack((y[0], y, y[-1]))
             if self.orientation == 'vertical':
-                xy = np.vstack([x, y]).T
+                xy = np.column_stack([x, y])
             else:
-                xy = np.vstack([y, x]).T
+                xy = np.column_stack([y, x])
             verts.append(xy)
             codes.append(np.array([Path.MOVETO] + [Path.LINETO]*(len(xy)-1)))
         return np.vstack(verts), np.hstack(codes)
