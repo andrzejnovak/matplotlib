@@ -6881,8 +6881,8 @@ such objects
             return tops, bins, cbook.silent_list(patch_type, patches)
 
     @_preprocess_data()
-    def levels(self, values, bins=None, *,
-                 orientation='vertical', baseline=0, fill=False, **kwargs):
+    def levels(self, values, edges=None, *,
+               orientation='vertical', baseline=0, fill=False, **kwargs):
         """
         A histogram-like line or filled plot.
 
@@ -6891,8 +6891,8 @@ such objects
         values : array-like
             An array of y-values.
 
-        bins : array-like, default: ``range(len(vals)+1)``
-            A array of x-values, with ``len(bins) == len(vals) + 1``,
+        edges : array-like, default: ``range(len(vals)+1)``
+            A array of x-values, with ``len(edges) == len(vals) + 1``,
             between which the curve takes on vals values.
 
         orientation : {'vertical', 'horizontal'}, default: 'vertical'
@@ -6924,15 +6924,15 @@ such objects
         else:
             kwargs.setdefault('edgecolor', _color)
 
-        if bins is None:
-            bins = np.arange(len(values) + 1)
+        if edges is None:
+            edges = np.arange(len(values) + 1)
 
         patch = mpatches.LevelsPatch(values,
-                                   bins,
-                                   baseline=baseline,
-                                   orientation=orientation,
-                                   fill=fill,
-                                   **kwargs)
+                                     edges,
+                                     baseline=baseline,
+                                     orientation=orientation,
+                                     fill=fill,
+                                     **kwargs)
         self.add_patch(patch)
         if baseline is None:
             baseline = 0

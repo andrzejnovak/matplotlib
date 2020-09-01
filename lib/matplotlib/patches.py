@@ -990,7 +990,7 @@ class PathPatch(Patch):
 
 
 class LevelsPatch(PathPatch):
-    """An unclosed stepline path patch."""
+    """An unclosed levels path patch."""
 
     @docstring.dedent_interpd
     def __init__(self, values, edges, *,
@@ -1024,6 +1024,8 @@ class LevelsPatch(PathPatch):
         super().__init__(path, **kwargs)
 
     def _update_data(self):
+        if np.isnan(np.sum(self._edges)):
+            raise ValueError('Nan values in "edges" are disallowed')
         if self._edges.size - 1 != self._values.size:
             raise ValueError('Size mismatch between "values" and "edges". '
                              "Expected `len(values) + 1 == len(edges)`, but "
