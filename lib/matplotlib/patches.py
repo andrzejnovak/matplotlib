@@ -989,7 +989,7 @@ class PathPatch(Patch):
         self._path = path
 
 
-class StepPatch(PathPatch):
+class LevelsPatch(PathPatch):
     """An unclosed stepline path patch."""
 
     @docstring.dedent_interpd

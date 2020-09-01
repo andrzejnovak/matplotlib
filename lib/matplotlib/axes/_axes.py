@@ -6881,7 +6881,7 @@ such objects
             return tops, bins, cbook.silent_list(patch_type, patches)
 
     @_preprocess_data()
-    def histline(self, values, bins=None, *,
+    def levels(self, values, bins=None, *,
                  orientation='vertical', baseline=0, fill=False, **kwargs):
         """
         A histogram-like line or filled plot.
@@ -6905,12 +6905,12 @@ such objects
 
         Returns
         -------
-        StepPatch : `.patches.StepPatch`
+        LevelsPatch : `.patches.LevelsPatch`
 
         Other Parameters
         ----------------
         **kwargs
-            `~.matplotlib.patches.StepPatch` properties
+            `~.matplotlib.patches.LevelsPatch` properties
 
         """
 
@@ -6927,7 +6927,7 @@ such objects
         if bins is None:
             bins = np.arange(len(values) + 1)
 
-        patch = mpatches.StepPatch(values,
+        patch = mpatches.LevelsPatch(values,
                                    bins,
                                    baseline=baseline,
                                    orientation=orientation,
